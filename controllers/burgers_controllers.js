@@ -6,13 +6,14 @@ var router = express.Router();
 router.get("/", function (req, res) {
     burger.all(function (data) {
         const hbsObject = {
-            burger: data,
+            burgers: data,
         };
         res.render("index", hbsObject);
     });
 });
 
-router.post("/api/burger", (req, res) => {
+router.post("/burgers/create", (req, res) => {
+    console.log(req)
     burger.create(req.body.burger_name, function () {
         res.redirect("/");
     });
