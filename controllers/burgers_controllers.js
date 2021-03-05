@@ -19,7 +19,7 @@ router.post("/burgers/create", (req, res) => {
     });
 });
 
-router.put("/api/buger/:id", (req, res) => {
+router.put("/api/burger/:id", (req, res) => {
     burger.update(req.params.id, function(result) {
         console.log(result);
         res.sendStatus(200);

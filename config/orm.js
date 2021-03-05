@@ -20,7 +20,15 @@ var orm = {
                 cb(result)
             })
     },
-    updateOne: () => {
+    updateOne: (id, cb) => {
+        var query = `UPDATE burgers SET devoured = true WHERE id ("${id}")`
+        connection.query(query, function(err, result) {
+            if(err){
+                throw err;
+            }
+            console.log(result)
+            cb(result)
+        })
 
     }
 }
