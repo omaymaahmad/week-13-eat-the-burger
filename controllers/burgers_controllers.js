@@ -13,13 +13,13 @@ router.get("/", function (req, res) {
 });
 
 router.post("/burgers/create", (req, res) => {
-    console.log(req)
     burger.create(req.body.burger_name, function () {
         res.redirect("/");
     });
 });
 
 router.put("/api/burger/:id", (req, res) => {
+    console.log(req)
     burger.update(req.params.id, function(result) {
         console.log(result);
         res.sendStatus(200);
