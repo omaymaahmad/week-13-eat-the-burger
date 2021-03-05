@@ -10,7 +10,7 @@ if(process.env.JAWSDB_URL){
         user: "root",
         password: "Jabeen98",
         database: "burgers_db"
-}
+    })}
 
 
 
