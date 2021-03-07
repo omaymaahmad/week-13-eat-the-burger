@@ -1,0 +1,17 @@
+.container {
+	background-color: #ffdfa4;
+	margin: 0px;
+	padding: 0px;
+}
+  
+#top-bar {
+	color:black;
+}
+  
+#burger {
+	float: right;
+}
+ 
+.devour-form {
+	color:black;
+}
